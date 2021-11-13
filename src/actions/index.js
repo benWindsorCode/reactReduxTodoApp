@@ -1,7 +1,8 @@
-export const addItem = (item) => {
+export const addItem = (item, user) => {
     return {
         type: 'ADD_ITEM',
-        item: item
+        item: item,
+        user: user
     }
 }
 

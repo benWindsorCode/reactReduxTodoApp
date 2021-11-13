@@ -1,8 +1,9 @@
 import './App.css';
 import { useSelector, useDispatch } from 'react-redux';
 import ListAdd from './ListAdd';
-import ListView from './listView';
+import ListView from './ListView';
 import Container from '@mui/material/Container';
+import ListSaveLoad from './ListSaveLoad';
 
 function App() {
   let shoppingList = useSelector(state => state.shoppingList);
@@ -12,6 +13,8 @@ function App() {
       <ListAdd></ListAdd>
       <br/>
       <ListView></ListView>
+      <br/>
+      <ListSaveLoad></ListSaveLoad>
       </Container>
     </div>
   );

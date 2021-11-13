@@ -9,7 +9,8 @@ class ListAdd extends Component {
         super(props);
 
         this.state = {
-            input: ''
+            input: '',
+            user: ''
         };
     }
 
@@ -17,8 +18,12 @@ class ListAdd extends Component {
         this.setState({input: newInput});
     }
 
+    updateUser(newUser) {
+        this.setState({user: newUser});
+    }
+
     handleClick = () => {
-        this.props.addItem(this.state.input);
+        this.props.addItem(this.state.input, this.state.user);
         this.setState({input: ''});
     }
 
@@ -31,7 +36,9 @@ class ListAdd extends Component {
     render() {
         return(
             <div>
-                <TextField variant="outlined" onChange={e => this.updateInput(e.target.value)} value={this.state.input} onKeyDown={this.handleKeyDown}></TextField>
+                <TextField variant="outlined" label="User" onChange={e => this.updateUser(e.target.value)} value={this.state.user}></TextField>
+                &nbsp;
+                <TextField variant="outlined" label="Item" onChange={e => this.updateInput(e.target.value)} value={this.state.input} onKeyDown={this.handleKeyDown}></TextField>
                 <br/><br/>
                 <Button variant="contained" onClick={this.handleClick}>Add Item</Button>
             </div>

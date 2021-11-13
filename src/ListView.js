@@ -20,7 +20,15 @@ class ListView extends Component {
         return(
             <div>List View: ({this.props.shoppingList.length} item(s))<br/>
                 <List>
-                    {this.props.shoppingList.map((item, index) => <div><ListItem disablePadding><ListItemButton><ClearIcon onClick={() => this.deleteItem(index)}/><ListItemText primary={item.name}/></ListItemButton></ListItem><Divider/></div>)}
+                    {this.props.shoppingList.map((item, index) => 
+                        <div key={index}>
+                            <ListItem disablePadding>
+                                <ListItemButton><ClearIcon onClick={() => this.deleteItem(index)}/><ListItemText primary={item.name}/></ListItemButton>
+                            </ListItem>
+                            <Divider/>
+                        </div>
+                    )}
+
                 </List>
             </div>
         )
