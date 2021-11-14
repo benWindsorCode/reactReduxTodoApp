@@ -6,11 +6,7 @@ This repo is a simple demo of how to make a rect todo app using redux for state 
 # Deployment
 If you would like to deploy this I would suggest using AWS Amplify, it can be as simple as pointing Amplify to the repo.
 
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Running
+# Running
 
 In the project directory, you can run:
 
