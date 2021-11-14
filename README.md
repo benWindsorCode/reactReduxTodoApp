@@ -1,7 +1,7 @@
 # React Redux Todo Demo App
 This repo is a simple demo of how to make a rect todo app using redux for state management.
 
-![Demo Screenshot](./demo.PNG)
+![Demo Screenshot](demo.png)
 
 # Deployment
 If you would like to deploy this I would suggest using AWS Amplify, it can be as simple as pointing Amplify to the repo.
